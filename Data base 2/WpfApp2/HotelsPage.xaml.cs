@@ -23,7 +23,7 @@ namespace WpfApp2
         public HotelsPage()
         {
             InitializeComponent();
-            DGridHotels.ItemsSource = ToursBaseEntities.GetContext().Hotels.ToList();
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

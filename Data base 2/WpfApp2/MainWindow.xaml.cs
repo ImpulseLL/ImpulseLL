@@ -31,8 +31,8 @@ namespace WpfApp2
         }
         private void ImportTours()
         {
-            var fileData = File.ReadAllLines(@"\\192.168.1.1\студенты\185\Аносов\Новая папка(4)\Лист Microsoft Excel(4).txt");
-            var images = Directory.GetFiles(@"C:\Users\Администратор\Pictures\Новая папка\rila-324966_960_720.jpg");
+            var fileData = File.ReadAllLines(@"C:\Users\Администратор\Pictures\Лист Microsoft Excel (4).txt");
+            var images = Directory.GetFiles(@"C:\Users\Администратор\Pictures\New");
 
             foreach (var line in fileData)
             {
@@ -46,9 +46,9 @@ namespace WpfApp2
                     IsActual = (data[4] == "0") ? false : true
                 };
 
-                foreach (var tourType in data[5].Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries))
+                foreach (var tourType in data[5].Replace("\"", "").Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries))
                 {
-                    var currentType = ToursBaseEntities.GetContext().Type.ToList().FirstOrDefault(p => p.Name == tourType);
+                    var currentType = ToursBaseEntities.GetContext().Type.ToList().FirstOrDefault(p => p.Code == tourType);
                     if (currentType != null)
                         tempTour.Type.Add(currentType);
                 }

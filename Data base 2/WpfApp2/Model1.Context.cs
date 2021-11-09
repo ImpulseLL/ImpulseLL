@@ -15,26 +15,25 @@ namespace WpfApp2
     
     public partial class ToursBaseEntities : DbContext
     {
-        public static ToursBaseEntities _context;
         public ToursBaseEntities()
             : base("name=ToursBaseEntities")
         {
         }
 
+        public static ToursBaseEntities Context;
         public static ToursBaseEntities GetContext()
         {
-            if (_context == null)
-                _context = new ToursBaseEntities();
-            return _context;
+            if (Context == null)
+                Context = new ToursBaseEntities();
+            return Context;
         }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Country> Countries { get; set; }
-        public virtual DbSet<Hotel> Hotels { get; set; }
+        public virtual DbSet<Country> Country { get; set; }
+        public virtual DbSet<Hotel> Hotel { get; set; }
         public virtual DbSet<HotelComment> HotelComment { get; set; }
         public virtual DbSet<HotelImage> HotelImage { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }

@@ -23,7 +23,7 @@ namespace WpfApp2
         public AddEditPage()
         {
             InitializeComponent();
-            ComboCountries.ItemsSource = ToursBaseEntities.GetContext().Countries.ToList();
+            ComboCountries.ItemsSource = ToursBaseEntities.GetContext().Country.ToList();
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
