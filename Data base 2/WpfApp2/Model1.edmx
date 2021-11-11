@@ -16,7 +16,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="CountOfStars" Type="int" Nullable="false" />
           <Property Name="CountryCode" Type="nchar" MaxLength="2" Nullable="false" />
@@ -74,7 +74,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Code" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Description" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="TypeOfTour">
@@ -85,7 +85,7 @@
           <Property Name="TourId" Type="int" Nullable="false" />
           <Property Name="TypeId" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK_Hotel_Country">
+        <Association Name="FK_Hotel_Country1">
           <End Role="Country" Type="Self.Country" Multiplicity="1" />
           <End Role="Hotel" Type="Self.Hotel" Multiplicity="*" />
           <ReferentialConstraint>
@@ -179,7 +179,7 @@
           <EntitySet Name="Tour" EntityType="Self.Tour" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Type" EntityType="Self.Type" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TypeOfTour" EntityType="Self.TypeOfTour" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Hotel_Country" Association="Self.FK_Hotel_Country">
+          <AssociationSet Name="FK_Hotel_Country1" Association="Self.FK_Hotel_Country1">
             <End Role="Country" EntitySet="Country" />
             <End Role="Hotel" EntitySet="Hotel" />
           </AssociationSet>
@@ -219,17 +219,17 @@
           </Key>
           <Property Name="Code" Type="String" MaxLength="2" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Hotel" Relationship="Self.FK_Hotel_Country" FromRole="Country" ToRole="Hotel" />
+          <NavigationProperty Name="Hotel" Relationship="Self.FK_Hotel_Country1" FromRole="Country" ToRole="Hotel" />
         </EntityType>
         <EntityType Name="Hotel">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CountOfStars" Type="Int32" Nullable="false" />
           <Property Name="CountryCode" Type="String" MaxLength="2" FixedLength="true" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Country" Relationship="Self.FK_Hotel_Country" FromRole="Hotel" ToRole="Country" />
+          <NavigationProperty Name="Country" Relationship="Self.FK_Hotel_Country1" FromRole="Hotel" ToRole="Country" />
           <NavigationProperty Name="HotelComment" Relationship="Self.FK_HotelComment_Hotel" FromRole="Hotel" ToRole="HotelComment" />
           <NavigationProperty Name="HotelImage" Relationship="Self.FK_HotelImage_Hotel" FromRole="Hotel" ToRole="HotelImage" />
           <NavigationProperty Name="Tour" Relationship="Self.HotelOfTour" FromRole="Hotel" ToRole="Tour" />
@@ -283,11 +283,11 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Code" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Tour" Relationship="Self.TypeOfTour" FromRole="Type" ToRole="Tour" />
         </EntityType>
-        <Association Name="FK_Hotel_Country">
+        <Association Name="FK_Hotel_Country1">
           <End Role="Country" Type="Self.Country" Multiplicity="1" />
           <End Role="Hotel" Type="Self.Hotel" Multiplicity="*" />
           <ReferentialConstraint>
@@ -331,7 +331,7 @@
           <End Role="Tour" Type="Self.Tour" Multiplicity="*" />
           <End Role="Type" Type="Self.Type" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="ToursBaseEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ToursBaseEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Country" EntityType="Self.Country" />
           <EntitySet Name="Hotel" EntityType="Self.Hotel" />
           <EntitySet Name="HotelComment" EntityType="Self.HotelComment" />
@@ -339,7 +339,7 @@
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Tour" EntityType="Self.Tour" />
           <EntitySet Name="Type" EntityType="Self.Type" />
-          <AssociationSet Name="FK_Hotel_Country" Association="Self.FK_Hotel_Country">
+          <AssociationSet Name="FK_Hotel_Country1" Association="Self.FK_Hotel_Country1">
             <End Role="Country" EntitySet="Country" />
             <End Role="Hotel" EntitySet="Hotel" />
           </AssociationSet>
@@ -365,7 +365,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище ToursBaseModelContainer" CdmEntityContainer="ToursBaseEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ToursBaseModelContainer" CdmEntityContainer="ToursBaseEntities1">
           <EntitySetMapping Name="Country">
             <EntityTypeMapping TypeName="ToursBaseModel.Country">
               <MappingFragment StoreEntitySet="Country">
@@ -432,7 +432,7 @@
             <EntityTypeMapping TypeName="ToursBaseModel.Type">
               <MappingFragment StoreEntitySet="Type">
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
               </MappingFragment>
             </EntityTypeMapping>

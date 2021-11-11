@@ -11,7 +11,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="CountOfStars" Type="int" Nullable="false" />
     <Property Name="CountryCode" Type="nchar" MaxLength="2" Nullable="false" />
@@ -69,7 +69,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Code" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="Description" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="TypeOfTour">
@@ -80,7 +80,7 @@
     <Property Name="TourId" Type="int" Nullable="false" />
     <Property Name="TypeId" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="FK_Hotel_Country">
+  <Association Name="FK_Hotel_Country1">
     <End Role="Country" Type="Self.Country" Multiplicity="1" />
     <End Role="Hotel" Type="Self.Hotel" Multiplicity="*" />
     <ReferentialConstraint>
@@ -174,7 +174,7 @@
     <EntitySet Name="Tour" EntityType="Self.Tour" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Type" EntityType="Self.Type" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypeOfTour" EntityType="Self.TypeOfTour" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Hotel_Country" Association="Self.FK_Hotel_Country">
+    <AssociationSet Name="FK_Hotel_Country1" Association="Self.FK_Hotel_Country1">
       <End Role="Country" EntitySet="Country" />
       <End Role="Hotel" EntitySet="Hotel" />
     </AssociationSet>

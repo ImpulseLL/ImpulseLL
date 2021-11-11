@@ -8,14 +8,15 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="75"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="30*"/>
+            <RowDefinition Height="66"/>
+            <RowDefinition Height="281*"/>
+            <RowDefinition Height="72*"/>
         </Grid.RowDefinitions>
-        <Image Source="/Resources/180595-1.jpg" HorizontalAlignment="Left"></Image>
-        <TextBlock Text="Header" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Image Source="/Resources/180595-1.jpg" HorizontalAlignment="Left" Width="113"></Image>
+        <TextBlock Text="Header" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Margin="348,13" Width="96"></TextBlock>
         <Grid Background="#bae3e8" Panel.ZIndex="-2"></Grid>
-        <Grid Grid.Row="2" Background="#445c93" Margin="0,287,0,0"></Grid>
-        <Frame Grid.Row="1" Name="MainFrame" Margin="0,0,0,10" Grid.RowSpan="2"></Frame>
+        <Grid Grid.Row="2" Background="#445c93" Margin="1,4,0,-6"></Grid>
+        <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" Name="MainFrame"></Frame>
+        <Button Content="Back" Name="BtnBack" HorizontalAlignment="Right" Click="BtnBack_Ckick" Width="28"></Button>
     </Grid>
 </Window>

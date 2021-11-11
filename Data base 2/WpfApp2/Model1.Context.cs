@@ -13,20 +13,21 @@ namespace WpfApp2
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ToursBaseEntities : DbContext
+    public partial class ToursBaseEntities1 : DbContext
     {
-        public ToursBaseEntities()
-            : base("name=ToursBaseEntities")
+        public ToursBaseEntities1()
+            : base("name=ToursBaseEntities1")
         {
         }
 
-        public static ToursBaseEntities Context;
-        public static ToursBaseEntities GetContext()
+        public static ToursBaseEntities1 Context;
+        public static ToursBaseEntities1 GetContext()
         {
             if (Context == null)
-                Context = new ToursBaseEntities();
+                Context = new ToursBaseEntities1();
             return Context;
         }
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

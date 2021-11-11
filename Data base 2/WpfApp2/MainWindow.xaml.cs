@@ -48,7 +48,7 @@ namespace WpfApp2
 
                 foreach (var tourType in data[5].Replace("\"", "").Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries))
                 {
-                    var currentType = ToursBaseEntities.GetContext().Type.ToList().FirstOrDefault(p => p.Code == tourType);
+                    var currentType = ToursBaseEntities1.GetContext().Type.ToList().FirstOrDefault(p => p.Name == tourType);
                     if (currentType != null)
                         tempTour.Type.Add(currentType);
                 }
@@ -60,11 +60,29 @@ namespace WpfApp2
                 {
                     Console.WriteLine(ex.Message);
                 }
-
-                ToursBaseEntities.GetContext().Tour.Add(tempTour);
-                ToursBaseEntities.GetContext().SaveChanges();
-
+                
+                ToursBaseEntities1.GetContext().Tour.Add(tempTour);
+                ToursBaseEntities1.GetContext().SaveChanges();
+               
             }
+        }
+        private void BtnBack_Ckick(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.GoBack();
+        }
+
+        private void MainFrame_ContentRendered(object sender, EventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                BtnBack.Visibility = Visibility.Visible;
+            }
+
+            else
+                BtnBack.Visibility = Visibility.Hidden;
         }
     }
 }
+   
+
+
