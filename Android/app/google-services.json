@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "711748953870",
+    "project_id": "chat-81e49",
+    "storage_bucket": "chat-81e49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:711748953870:android:c36e050f0ca4c14652995f",
+        "android_client_info": {
+          "package_name": "com.example.kurs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "711748953870-jfpchsbo1nsjc2sgpieufr5ju9tobeau.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kurs",
+            "certificate_hash": "0cdbeed50668bab93b28483d323262af51681833"
+          }
+        },
+        {
+          "client_id": "711748953870-v473hh4tmab01uodou0igd0gmg3c92d8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0fo7mbUn3tlzgGvIFELRjVAetH6C_ohQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "711748953870-v473hh4tmab01uodou0igd0gmg3c92d8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
