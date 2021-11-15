@@ -19,7 +19,6 @@ namespace WpfApp2
             : base("name=ToursBaseEntities1")
         {
         }
-
         public static ToursBaseEntities1 Context;
         public static ToursBaseEntities1 GetContext()
         {
@@ -27,7 +26,6 @@ namespace WpfApp2
                 Context = new ToursBaseEntities1();
             return Context;
         }
-    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

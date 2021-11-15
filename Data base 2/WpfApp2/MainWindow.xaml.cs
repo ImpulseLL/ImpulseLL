@@ -24,15 +24,15 @@ namespace WpfApp2
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new HotelsPage());
+            MainFrame.Navigate(new ToursApp());
             Manager.MainFrame = MainFrame;
 
             ImportTours();
         }
         private void ImportTours()
         {
-            var fileData = File.ReadAllLines(@"C:\Users\Администратор\Pictures\Лист Microsoft Excel (4).txt");
-            var images = Directory.GetFiles(@"C:\Users\Администратор\Pictures\New");
+            var fileData = File.ReadAllLines(@"C:\Data base 2\Лист Microsoft Excel(4).txt");
+            var images = Directory.GetFiles(@"C:\Data base 2\New");
 
             foreach (var line in fileData)
             {
