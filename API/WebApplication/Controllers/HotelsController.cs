@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using WebApplication.Entities;
+using WebApplication.Models;
 
 namespace WebApplication.Controllers
 {
@@ -17,9 +18,10 @@ namespace WebApplication.Controllers
         private ToursBaseEntities db = new ToursBaseEntities();
 
         // GET: api/Hotels
-        public IQueryable<Hotel> GetHotel()
+        [ResponseType(typeof(List<ResponseHotel>))]
+        public IHttpActionResult GetHotel()
         {
-            return db.Hotel;
+            return Ok(db.Hotel.ToList().ConvertAll(p=> new ResponseHotel(p)));
         }
 
         // GET: api/Hotels/5
