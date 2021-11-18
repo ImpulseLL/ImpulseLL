@@ -80,3 +80,32 @@ C:\Data base 2\WpfApp2\obj\Debug\WpfApp2.exe
 C:\Data base 2\WpfApp2\obj\Debug\WpfApp2.pdb
 C:\Data base 2\WpfApp2\obj\Debug\ToursApp.g.cs
 C:\Data base 2\WpfApp2\obj\Debug\ToursApp.baml
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\bin\Debug\WpfApp2.exe.config
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\bin\Debug\WpfApp2.exe
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\bin\Debug\WpfApp2.pdb
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\bin\Debug\EntityFramework.dll
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\bin\Debug\EntityFramework.xml
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\WpfApp2.csproj.AssemblyReference.cache
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\AddEditPage.g.cs
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\HotelsPage.g.cs
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\MainWindow.g.cs
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\ToursApp.g.cs
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\App.g.cs
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\WpfApp2_Content.g.cs
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\WpfApp2_MarkupCompile.cache
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\WpfApp2_MarkupCompile.lref
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\AddEditPage.baml
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\HotelsPage.baml
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\MainWindow.baml
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\ToursApp.baml
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\WpfApp2.g.resources
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\WpfApp2.Properties.Resources.resources
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\WpfApp2.csproj.GenerateResource.cache
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\WpfApp2.csproj.CoreCompileInputs.cache
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\WpfApp2.csproj.CopyComplete
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\WpfApp2.exe
+C:\Users\Администратор\source\repos\WpfApp2\Новая папка\ImpulseLL\Data base 2\WpfApp2\obj\Debug\WpfApp2.pdb
