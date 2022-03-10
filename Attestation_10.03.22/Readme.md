@@ -30,3 +30,34 @@ namespace ClassLibrary
         }
     }
 }
+    
+    
+    
+    
+    
+    
+    using System;
+using System.Reflection;
+using ClassLibrary;
+
+namespace APP
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(vscode.GetStudNumber("Иванов Иван Иванович", DateTime.Now, Convert.ToInt32("12")));
+            Console.ReadKey();
+
+            Assembly a = Assembly.Load("ClassLibrary");
+            Object o = a.CreateInstance("ClassLibrary.vscode");
+            Type t = a.GetType("ClassLibrary.vscode");
+            Object[] numbers = new Object[2];
+            numbers[0] = 1;
+            numbers[1] = 5;
+            MethodInfo mi = t.GetMethod("add");
+            Console.WriteLine(mi.Invoke(o, numbers));
+            Console.ReadLine();
+        }
+    }
+}
